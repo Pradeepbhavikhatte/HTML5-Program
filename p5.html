@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emoji shape</h1>
+
+    <canvas id="pic"></canvas>
+
+    <script>
+        var can = document.getElementById("pic")
+        if(can.getContext){
+            x.beginPath();
+            let x = can.getContext("2d")
+            x.beginPath();
+
+            // x.arc(x,y,radius, startAngle, endAngle, counterClosewise)
+            x.beginPath();
+            x.arc(75,75,40,0,Math.PI * 2, true) // outer circle
+            x.move(110,75)
+
+            x.arc(75,75,35,0,Math.PI * 2, false) // mouth clockwise
+            x.move(65,65)
+
+            x.arc(60,65,5,0,Math.PI * 2, true) // left eye
+            x.move(95,65)
+
+            x.arc(60,65,5,0,Math.PI * 2, true) // left eye
+            x.move(95,65)
+
+            x.stroke()
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Shape</title>
+    <style>
+        #pic {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emoji Shape</h1>
+
+    <canvas id="pic"></canvas>
+
+    <script>
+        var can = document.getElementById("pic");
+        if (can.getContext) {
+            let x = can.getContext("2d");
+
+            // Draw outer circle (face)
+            x.beginPath(); -->
+            <!-- x.arc(75, 75, 40, 0, Math.PI * 2, true); // Outer circle
+            x.stroke();
+
+            // Draw mouth
+            x.beginPath();
+            x.arc(75, 75, 25, 0, Math.PI, false); // Mouth (clockwise)
+            x.stroke();
+
+            // Draw left eye
+            x.beginPath();
+            x.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+            x.stroke();
+
+            // Draw right eye
+            x.beginPath();
+            x.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+            x.stroke();
+        }
+    </script>
+</body>
+</html> -->

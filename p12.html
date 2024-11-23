@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            selector{
+            prop: value} 
+         */
+         .alert{
+            width: 30%;
+            height: 100px;
+            padding: 10px;
+            border: none;
+            background-color: orange;
+            box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+         }
+         .btn-group{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         }
+         .btn{
+            padding: 5px 7px;
+            border: none;
+            cursor: pointer;
+            color: blue;
+         }
+         .ok{
+            background-color: green;
+         }
+         .cancel{
+            background-color: orangered;
+         }
+    </style>
+</head>
+<body>
+    <h1>Dialog box</h1>
+
+    <button id="logout" class="btn-group">Logout</button>
+    <dialog id="alert">
+        <h3>Are you sure to Logout?</h3>
+        <div class="btn-group">
+            <button class="btn ok">Ok</button>
+            <button id="cancel" class="btn cancel">Cancel</button>
+        </div>
+    </dialog>
+
+    <script>
+        var x = document.getElementById("alert")
+        var logout = document.getElementById("logout");
+        var cancel = document.getElementById("cancel");
+
+        logout.addEventListener("click", function(){
+            x.show();
+        });
+        cancel.addEventListener("click", function(){
+            x.close();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>text on canvas</h1>
+
+    <canvas id="txt"></canvas>
+
+    <script>
+        var can = document.getElementById("txt")
+        var x = can.getContext("2d")
+        x.font = "32px sans-serif"
+        x.fillText("Welcome", 40, 40)
+    </script>
+</body>
+</html>

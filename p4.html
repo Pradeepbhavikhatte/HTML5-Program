@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Tag</h1>
+
+    <!-- canvas is used to print the 2d graphics -->
+    <canvas id="pic"></canvas>
+
+    <script>
+        let can = document.getElementById('pic')
+        let x = can.getContext('2d')
+         x.fillStyle = "orange"
+        x.fillRect(53,40,120, 60) /* fillRect(x,y,width,heiht) */
+    </script>
+</body>
+</html>
